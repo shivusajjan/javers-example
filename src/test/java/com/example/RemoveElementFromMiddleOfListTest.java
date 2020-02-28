@@ -27,11 +27,20 @@ public class RemoveElementFromMiddleOfListTest {
         //Removed new Address("Bangalore", "Vinayaka") from the position 0 of list but result is saying removed from position 1
         //even though i used LEVENSHTEIN_DISTANCE algorithm. Output is mentioned below
         /**
-         * Output:
-         *
+         * Actual Output:
+         *---------------
          *  * changes on Employee/Frodo :
          *     - 'addressList' collection changes :
          *       1. 'Employee/Frodo#addressList/1' removed
+         */
+
+        //I am expecting output in below
+         /**
+         * Expected output:
+         *----------------
+         *  * changes on Employee/Frodo :
+         *     - 'addressList' collection changes :
+         *       0. 'Employee/Frodo#addressList/0' removed
          */
 
         List<Address> newAddresses = new ArrayList<>();
