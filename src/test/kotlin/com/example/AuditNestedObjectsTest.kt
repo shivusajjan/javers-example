@@ -32,7 +32,7 @@ internal class AuditNestedObjectsTest {
 
         val before = Node("n1", "node1", devices)
 
-        //Remove device2
+        //1. Scenario - Remove device2
 
         val newDevice1 = Device("d1", "device1")
         val newDevices = mutableListOf<Device>()
@@ -43,7 +43,7 @@ internal class AuditNestedObjectsTest {
         println("removed $diff")
 
 
-        //Add device2
+        //2. Scenario - Add device2
         device1 = Device("d1", "device1") // devices/d1 -
         device2 = Device("d2", "device2")  // devices/2
         devices = mutableListOf<Device>()
@@ -56,7 +56,7 @@ internal class AuditNestedObjectsTest {
         println("added $diff")
 
 
-        //Remove device1 from the device list
+        //3. Scenario - Remove device1 from the device list
         device2 = Device("d2", "device2")  // devices/2
         var device3 = Device("d3", "device3")  // devices/2
         var newDevices2 = mutableListOf<Device>()
@@ -69,7 +69,7 @@ internal class AuditNestedObjectsTest {
         println("removed device1 from the device list ${diff.prettyPrint()}")
 
 
-        //Changed device2 to mydevice2
+        //4. Scenario - Changed device2 to mydevice2
         device2 = Device("d2", "mydevice2")  // devices/2
         var newDevices3 = mutableListOf<Device>()
         newDevices3.add(device2)
