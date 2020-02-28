@@ -24,6 +24,15 @@ public class RemoveElementFromMiddleOfListTest {
         Employee oldEmp = new Employee("Frodo", 12000, 41, addresses);
         javers.commit("me@here.com", oldEmp);
 
+        //Removed new Address("Bangalore", "Vinayaka") from the position 0 of list but result is saying removed from position 1
+        //even though i used LEVENSHTEIN_DISTANCE algorithm. Output is mentioned below
+        /**
+         * Output:
+         *
+         *  * changes on Employee/Frodo :
+         *     - 'addressList' collection changes :
+         *       1. 'Employee/Frodo#addressList/1' removed
+         */
 
         List<Address> newAddresses = new ArrayList<>();
         newAddresses.add( new Address("Bangalore", "Vijayanagar"));
