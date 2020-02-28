@@ -10,17 +10,7 @@ import org.junit.jupiter.api.Test
 
 import static org.javers.core.diff.ListCompareAlgorithm.LEVENSHTEIN_DISTANCE
 
-//TODO:: In 3rd scenario - I removed device1 from position 0 of device list but it shows position 1. Output mentioned below in Java doc
-// I just delete device, result shows value changed. So output is confusing to me
-/**
- * Output:
- * * object removed: Node/n1#devices/1
- * * changes on Node/n1 :
- *   - 'devices' collection changes :
- *     1. 'Node/n1#devices/1' removed
- *   - 'devices/0.deviceCode' value changed from 'd1' to 'd2'
- *   - 'devices/0.name' value changed from 'device1' to 'device2'
- */
+
 class RemovedElementFromMiddleOfListTests {
 
     @Test
