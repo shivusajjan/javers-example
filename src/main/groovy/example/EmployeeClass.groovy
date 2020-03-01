@@ -11,9 +11,9 @@ class EmployeeClass {
 
     int age;
 
-    List<Address> addressList;
+    List<AddressClass> addressList;
 
-    EmployeeClass(String name, int salary, int age, List<Address> addressList) {
+    EmployeeClass(String name, int salary, int age, List<AddressClass> addressList) {
         this.name = name;
         this.salary = salary;
         this.age = age;
